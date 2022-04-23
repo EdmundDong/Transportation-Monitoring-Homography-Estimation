@@ -4,3 +4,6 @@
 [submodule "HomographyNet"]
 	path = HomographyNet
 	url = https://github.com/EdmundDong/HomographyNet.git
+[submodule "IPM-Homography"]
+	path = IPM-Homography
+	url = https://github.com/hamzamuz42/IPM-Homography.git
