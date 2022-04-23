@@ -1,3 +1,6 @@
 [submodule "automatic-background-extraction"]
 	path = automatic-background-extraction
 	url = https://github.com/StanleyLiu17/automatic-background-extraction.git
+[submodule "HomographyNet"]
+	path = HomographyNet
+	url = https://github.com/EdmundDong/HomographyNet.git
