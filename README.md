@@ -9,6 +9,28 @@ The purpose of the Background Extraction submodule is to enhance homography tran
 2. Running inference is as simple as `python test.py --input [PATH_TO_INPUT_DIR] --output [PATH_TO_OUTPUT_DIR]`, all image processing is handled internally. Output images will have the same file name and resolution as the input images. If the `--input` and `--output` command line arguments are the same, images in the `--input` directory will be saved over.
 3. `train_segnet.ipynb` is provided for the purpose of training the semantic segmentation stage. To train the inpainting model, please refer to the submodule README
 
+### Relevant Folder and File Descriptions
+| Folder/File | Descriptions |
+| -- | -- |
+| scripts/ | Script to generate files listing files to be used for training, validation, and testing |
+| checkpoints/ | Folder containing semantic segmentation and inpainting weights |
+| src/ | This folder contains the bulk of the functionality |
+| config.py | training config for image size, batch size, input folder, and training parameters |
+| main.py | Creates necessary models and begins inference |
+| test.py | Starts `main.py` with inference mode |
+| requirements.txt | Contains a list of necessary dependencies to install |
+| train_segnet.ipynb | Contains code for purpose of training SegNet |
+| dataset.py | Stores images, produced edges, and produced masks required for inference |
+| edge_connect.py | Runs inference on images |
+| generate_dataset.py | Various collected functions used to generate the datasets in the proper formats required for EdgeConnect training |
+| image_proc.py | Handles image slicing, image stitching, and cleanup of folders used for those purposes |
+| loss.py | Implements various loss functions |
+| models.py | Contains propogation methods for the edge and inpainting models |
+| networks.py | Contains model architectures |
+| segmentor.py | Uses semantic segmentation to remove vehicles and generate corresponding masks |
+| utils.py | Various utility functions used throughout the project |
+
+
 ## HomographyNet
 The main purpose of the HomographyNet submodule is to estimate the relative homography between a pair of images. In practical terms, this estimation would be the matrix transformation that would warp one image to appear to be from the same perspective as another. In the context of this project, the goal of the submodule is to input a camera view of an intersection and a satellite view of that same intersection. 
 
