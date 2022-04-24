@@ -1,6 +1,13 @@
 # Transportation-Monitoring-Homography-Estimation
 
 ## Background Extraction
+The purpose of the Background Extraction submodule is to enhance homography transformation results through the removal of objects that may alter the output. In this case, we consider such objects to be vehicles.
+
+### Submodule Workflow
+
+1. Input images can be placed anywhere, as long as the folder is accessible, and the proper path is provided at the command line. Any output directory can be specified, if the path does not exist a folder will be automatically created.
+2. Running inference is as simple as `python test.py --input [PATH_TO_INPUT_DIR] --output [PATH_TO_OUTPUT_DIR]`, all image processing is handled internally. Output images will have the same file name and resolution as the input images. If the `--input` and `--output` command line arguments are the same, images in the `--input` directory will be saved over.
+3. `train_segnet.ipynb` is provided for the purpose of training the semantic segmentation stage. To train the inpainting model, please refer to the submodule README
 
 ## HomographyNet
 The main purpose of the HomographyNet submodule is to estimate the relative homography between a pair of images. In practical terms, this estimation would be the matrix transformation that would warp one image to appear to be from the same perspective as another. In the context of this project, the goal of the submodule is to input a camera view of an intersection and a satellite view of that same intersection. 
