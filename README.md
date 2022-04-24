@@ -11,9 +11,9 @@ The main purpose of the HomographyNet submodule is to estimate the relative homo
 
 2. Images must be pre-processed into pickles for training and testing with `pre_process.py`. The current implementation will split the input files into a training, validating, and testing set. As images are compiled for pickling, the network input and targets are placed in `HomographyNet\output\preprocess` for each image that is pickled. 
 
-3. Training is completed with `train.py`. Valid arguments for training are `--end-epoch`, `--lr` (to set the starting learning rate), `--momentum`, `--batch-size`, `--checkpoint` (to resume training). Checkpoints are automatically saved during training. Tensorboard can be opened to view training statistics using `tensorboard --logdir runs`. 
+3. Training is completed with `train.py`. Valid arguments for training are `--end-epoch`, `--lr` (to set the starting learning rate), `--momentum`, `--batch-size`, `--checkpoint` (to resume training). Checkpoints are automatically saved during training (`BEST_checkpoint.tar`, `BEST_model.pt`, `checkpoint.tar`, `model.pt`). Tensorboard can be opened to view training statistics using `tensorboard --logdir runs`. 
 
-4. Testing is completed with `test.py`. As images are tested, the network output and targets are placed in `HomographyNet\output\test` for each image pair that is tested. Testing can also be done with traditional homography estimation algorithms (SURF + RANSAC, Identity Homography) using `test_orb.py`.
+4. Testing is completed with `test.py`. As images are tested, the network output and targets are placed in `HomographyNet\output\test` for each image pair that is tested. The files `BEST_model.pt` is used for testing. Testing can also be done with traditional homography estimation algorithms (SURF + RANSAC, Identity Homography) using `test_orb.py`.
 
 ### Relevant Folder and File Descriptions
 | Folder/File | Descriptions |
