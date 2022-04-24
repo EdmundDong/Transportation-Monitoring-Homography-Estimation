@@ -25,7 +25,7 @@ The purpose of the Background Extraction submodule is to enhance homography tran
 | generate_dataset.py | Various collected functions used to generate the datasets in the proper formats required for EdgeConnect training |
 | image_proc.py | Handles image slicing, image stitching, and cleanup of folders used for those purposes |
 | loss.py | Implements various loss functions |
-| models.py | Contains propogation methods for the edge and inpainting models |
+| models.py | Contains propagation methods for the edge and inpainting models |
 | networks.py | Contains model architectures |
 | segmentor.py | Uses semantic segmentation to remove vehicles and generate corresponding masks |
 | utils.py | Various utility functions used throughout the project |
