@@ -45,13 +45,14 @@ The purpose of the Background Extraction submodule is to enhance homography tran
 3. Repo also provides the video stabilization script which elements any physical movement of the camera to create a stable video which helps in creating better input for background extraction.
 
 ### Relevant Folder and File Descriptions
-+ | Folder/File | Descriptions |
-+ |`extracted_background/`| All the extracted background output photos are stored here.|
-+ |`input_vidoes/`| input to the scripts is stored here.|
-+ |`stabilized_video/`|output of the video stabilization script is stored here.|
-+ |`video_background_extraction_guassian_model.py`| Script for background Extraction using gaussian model.|
-+ |`video_background_extraction_median_filtering.py`|Script for background Extraction using median filtering.|
-+ |`video_stabilization.py`|Script for video stabilization.|
+| Folder/File | Descriptions |
+| -- | -- |
+| `extracted_background/`| All the extracted background output photos are stored here. |
+| `input_vidoes/`| input to the scripts is stored here.|
+| `stabilized_video/`| output of the video stabilization script is stored here. |
+| `video_background_extraction_guassian_model.py`| Script for background Extraction using gaussian model. |
+| `video_background_extraction_median_filtering.py`|Script for background Extraction using median filtering.|
+| `video_stabilization.py`| Script for video stabilization. |
 
 
 ## HomographyNet
@@ -114,4 +115,4 @@ Inverse Perspective Mapping (IPM) is often applied to remove the perspective eff
 | ipm.py | Main script which loads image, all functions and create instance of Plane class |
 | utils.py | Contains all helper functions and class definition for main script |
 | camera.json | Defines intrinsic and extrinsic parameters of camera |
-| /calibration_2d | Contains all calibration matrices for cameras |
+| /calibration_2d | Contains all calibration matrices for intersection cameras |
