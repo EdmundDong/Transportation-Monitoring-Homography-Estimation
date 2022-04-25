@@ -3,6 +3,8 @@
 ## Background Extraction
 The purpose of the Background Extraction submodule is to enhance homography transformation results through the removal of objects that may alter the output. In this case, we consider such objects to be vehicles.
 
+###Background Extraction from Satellite Images - 
+
 ### Submodule Workflow
 
 1. Input images can be placed anywhere, as long as the folder is accessible, and the proper path is provided at the command line. Any output directory can be specified, if the path does not exist a folder will be automatically created.
@@ -29,6 +31,27 @@ The purpose of the Background Extraction submodule is to enhance homography tran
 | networks.py | Contains model architectures |
 | segmentor.py | Uses semantic segmentation to remove vehicles and generate corresponding masks |
 | utils.py | Various utility functions used throughout the project |
+
+###Background Extraction from traffic camera video feed. 
+
+### Submodule Workflow
+
+1. Input can be placed anywhere just need to provide valid path to the script. Currently all input is provided in the input_videos folder.
+2. Two methods are available for the background extraction- 
+   - Median filtering `video_background_extraction_median_filtering.py`
+        + easy to compute method requires very less resources. Provide input video location at the end of file.
+   - gaussian filtering `video_background_extraction_guassian_model.py`
+        + Computationally heavy but less error prone, Provide input video location at the end of file.
+3. Repo also provides the video stabilization script which elements any physical movement of the camera to create a stable video which helps in creating better input for background extraction.
+
+### Relevant Folder and File Descriptions
++ | Folder/File | Descriptions |
++ |`extracted_background/`| All the extracted background output photos are stored here.|
++ |`input_vidoes/`| input to the scripts is stored here.|
++ |`stabilized_video/`|output of the video stabilization script is stored here.|
++ |`video_background_extraction_guassian_model.py`| Script for background Extraction using gaussian model.|
++ |`video_background_extraction_median_filtering.py`|Script for background Extraction using median filtering.|
++ |`video_stabilization.py`|Script for video stabilization.|
 
 
 ## HomographyNet
