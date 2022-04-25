@@ -75,3 +75,20 @@ The main purpose of the HomographyNet submodule is to estimate the relative homo
 - Implementation has only been tested on a CUDA system. 
 
 ## IPM Transformation
+Inverse Perspective Mapping (IPM) is often applied to remove the perspective effect from a street view image and to remap it into a 2D top-down view domain. Images from IPM can then be used for several tasks such as lane marking detection, path planning and vehicle prediction, all based on feed from a monocular camera. The objective of IPM-Homography submodule is to map all pixels from he given street view points into Bird's-eye view using homography projection. 
+
+### Submodule Workflow
+
+1. `ipm.py` is the main script where street view image is loaded and a region of the road is selected which needs to be transformed. For this the region, pixel resolution, scale and pose of the camera with respect to the world is denied in an instance of Plane class. Intrinsic & extrinsic parameters of camera are loaded and perspective function is called which returns the warped image. As a comparison with transformation by OpenCV, the same image is transformed using OpenCV's getPerspectiveTransform which takes in source and destination pixel coordinates and returns a homography matrix. Then warpPerspective function is used to apply the homography function to image.
+
+2. `utils.py` defines all functions including perspective which applies perspective function for all 3D points in the region using camera projection model to pixel coordinates. bilinear_sampler is used for interpolation which is requires to prevent hole in the warped image when corresponding pixels from the street view is mapped to 2D plane.
+3.  `camera.json` defines all intrinsic, extrinsic camera parametrs, pitch, roll and yaw of camera with respect to the road. 
+4.  calibration_2d consists of all calibration matrices and masks for the 4 lane cross section road cameras.
+
+### Relevant Folder and File Descriptions
+| Folder/File | Descriptions |
+| -- | -- |
+| ipm.py | Main script which loads image, all functions and create instance of Plane class |
+| utils.py | Contains all helper functions and class definition for main script |
+| camera.json | Defines intrinsic and extrinsic parameters of camera |
+| /calibration_2d | Contains all calibration matrices for cameras |
