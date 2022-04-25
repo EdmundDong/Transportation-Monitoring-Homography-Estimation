@@ -3,7 +3,7 @@
 ## Background Extraction
 The purpose of the Background Extraction submodule is to enhance homography transformation results through the removal of objects that may alter the output. In this case, we consider such objects to be vehicles.
 
-###Background Extraction from Satellite Images - 
+<!-- ###Background Extraction from Satellite Images -  -->
 
 ### Submodule Workflow
 
