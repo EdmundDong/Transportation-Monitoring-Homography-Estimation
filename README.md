@@ -32,7 +32,7 @@ The purpose of the Background Extraction submodule is to enhance homography tran
 | segmentor.py | Uses semantic segmentation to remove vehicles and generate corresponding masks |
 | utils.py | Various utility functions used throughout the project |
 
-###Background Extraction from traffic camera video feed. 
+## Background Extraction from traffic camera video feed. 
 
 ### Submodule Workflow
 
