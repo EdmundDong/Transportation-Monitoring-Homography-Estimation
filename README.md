@@ -46,8 +46,8 @@ The main purpose of the HomographyNet submodule is to estimate the relative homo
 
 5. Testing is completed with `test.py`. As images are tested, the network output and targets are placed in `HomographyNet\output\test` for each image pair that is tested. The files `BEST_model.pt` is used for testing. Testing can also be done with traditional homography estimation algorithms (SURF + RANSAC, Identity Homography) using `test_orb.py`.
 
-
-![Homography](/Homography Tune Results/Homography.PNG)
+### Transformation Result
+![Homography](https://user-images.githubusercontent.com/101226336/165016745-740a899a-6b2d-43ba-82f2-b4379b001797.PNG)
 
 
 ### Relevant Folder and File Descriptions
