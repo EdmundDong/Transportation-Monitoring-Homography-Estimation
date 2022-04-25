@@ -7,3 +7,6 @@
 [submodule "IPM-Homography"]
 	path = IPM-Homography
 	url = https://github.com/hamzamuz42/IPM-Homography.git
+[submodule "Background-Extraction-From-Video"]
+	path = Background-Extraction-From-Video
+	url = https://github.com/manthan-pict/Background-Extraction-From-Video.git
