@@ -60,7 +60,7 @@ The main purpose of the HomographyNet submodule is to estimate the relative homo
 | test_orb.py | infer homography of images in test set using SURF + RANSAC or Identity Homography |
 | train.py | train network |
 | utils.py | handler for general utilities like saving checkpoints or parsing training arguments |
-| series generation/imageSeriesCreation.py| Script |
+| series generation/imageSeriesCreation.py| Script to generate transformation series from an image by specifying transform limit and shift|
 
 ### Notes
 
