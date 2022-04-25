@@ -106,7 +106,7 @@ Inverse Perspective Mapping (IPM) is often applied to remove the perspective eff
 
 2. `utils.py` defines all functions including perspective which applies perspective function for all 3D points in the region using camera projection model to pixel coordinates. bilinear_sampler is used for interpolation which is requires to prevent hole in the warped image when corresponding pixels from the street view is mapped to 2D plane.
 3.  `camera.json` defines all intrinsic, extrinsic camera parametrs, pitch, roll and yaw of camera with respect to the road. 
-4.  calibration_2d consists of all calibration matrices and masks for the 4 lane cross section road cameras.
+4.  calibration_2d consists of all calibration matrices and masks for the 4 lane cross-section road cameras.
 
 ### Relevant Folder and File Descriptions
 | Folder/File | Descriptions |
